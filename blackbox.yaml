@@ -39,9 +39,7 @@ spec:
         - mountPath: /etc/blackbox_exporter/
           name: blackbox-config
           readOnly: false
-#        - mountPath: /etc/urls
-#          name: monitor-url
-#          subPath: blackbox_exporter
+
       nodeSelector:
 #        beta.kubernetes.io/os: linux
          dedicatedfor: publicservice
@@ -49,10 +47,3 @@ spec:
       - configMap:
           name: blackbox-config
         name: blackbox-config
-#      - name: monitor-url
-#        flexVolume:
-#          driver: alicloud/nas
-#          options:
-#            server: 206644978b-pds47.cn-shenzhen.nas.aliyuncs.com
-#            path: /
-#            vers: "4.0"
