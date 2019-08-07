@@ -11,7 +11,7 @@ spec:
     - name: alertmanager-main
       namespace: monitoring
       port: web
-  baseImage: registry-vpc.cn-shenzhen.aliyuncs.com/dading/prometheus
+  baseImage: registry-vpc.cn-shenzhen.aliyuncs.com/****/prometheus
   nodeSelector:
 #    beta.kubernetes.io/os: linux
      dedicatedfor: publicservice
@@ -59,21 +59,6 @@ spec:
   accessModes:
   - ReadWriteOnce # required
   nfs:
-    server: 2d0554920e-vcm27.cn-shenzhen.nas.aliyuncs.com
+    server: 2d****0e-vcm27.cn-shenzhen.nas.aliyuncs.com
     path: "/prometheus"
-#---
-#apiVersion: v1
-#kind: PersistentVolume
-#metadata:
-#  name: prometheus-pv-1
-#  labels:
-#    app: prometheus-data
-#spec:
-#  capacity:
-#    storage: 50Gi
-#  persistentVolumeReclaimPolicy: Delete
-#  accessModes:
-#  - ReadWriteOnce # required
-#  nfs:
-#    server: 192.168.1.229
-#    path: "/prometheus-1"
+
